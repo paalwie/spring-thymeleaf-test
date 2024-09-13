@@ -21,7 +21,7 @@ public class GreetingController {
     @ResponseBody
     public Person personJson(@RequestParam(name="n", required = false, defaultValue = "idiot") String derName, Model model) {
 
-        Person person = new Person();
+        Person person = Person.builder().build();
         person.setId(1);
         person.setName(derName);
         model.addAttribute("testName", derName);
