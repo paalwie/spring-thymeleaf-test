@@ -6,7 +6,7 @@
 
     <link
             rel="stylesheet"
-            th:href="@{'/css/' + ${cssFileName} + '.css'}"
+            th:href="@{'/css/' + ${cssFileName.isEmpty() ? 'boring' : cssFileName} + '.css'}"
             type="text/css"/>
 </head>
 <body>

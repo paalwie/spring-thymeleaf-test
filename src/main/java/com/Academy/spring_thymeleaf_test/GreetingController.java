@@ -17,7 +17,7 @@ public class GreetingController {
     @GetMapping("/greeting")
     public String greeting(
             @RequestParam(name="n", required = false, defaultValue = "Welt") String someName,
-            @RequestParam(name="m", required = false, defaultValue = "nichtCSS") String cssName,
+            @RequestParam(name="m", required = false, defaultValue = "") String cssName,
             Model model)
     {
 
