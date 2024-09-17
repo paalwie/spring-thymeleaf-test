@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class GreetingController {
 
+    /*
+        neben dem Link (http://localhost:8080/greeting) "?n=Irgendwas" eingeben
+        bzw. "?m=Irgendwas".
+     */
     @GetMapping("/greeting")
     public String greeting(
             @RequestParam(name="n", required = false, defaultValue = "Welt") String someName,
