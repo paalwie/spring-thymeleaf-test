@@ -11,9 +11,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class GreetingController {
 
     @GetMapping("/greeting")
-    public String greeting(@RequestParam(name="n", required = false, defaultValue = "Welt") String someName, Model model) {
+    public String greeting(
+            @RequestParam(name="n", required = false, defaultValue = "Welt") String someName,
+            @RequestParam(name="m", required = false, defaultValue = "nichtCSS") String cssName,
+            Model model)
+    {
 
         model.addAttribute("inputName", someName);
+        model.addAttribute("cssFileName", cssName);
+
         return "greeting";
     }
 

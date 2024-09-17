@@ -3,6 +3,11 @@
 <head>
     <title>Hello</title>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+
+    <link
+            rel="stylesheet"
+            th:href="@{'/css/' + ${cssFileName} + '.css'}"
+            type="text/css"/>
 </head>
 <body>
 
